@@ -10,22 +10,26 @@ module.exports = {
     devServer: {
         inline: true,
         port: 8080
-     },
+    },
     module: {
         rules: [
-           {
-              test: /\.jsx?$/,
-              exclude: /node_modules/,
-              loader: 'babel-loader',
-              query: {
-                 presets: ['@babel/env', '@babel/react']
-              }
-           }
+            {
+                test: /\.(js|jsx)?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['@babel/env', '@babel/react']
+                }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
         ]
-     },
+    },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/index.html"
+            template: './src/index.html'
         })
     ]
 }
