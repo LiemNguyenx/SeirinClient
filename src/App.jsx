@@ -8,7 +8,7 @@ class App extends Component {
                     <div className="col-lg-3">123</div>
                     <div className="col-lg-3">456</div>
                     <div className="col-lg-3">789</div>
-                    <div className="col-lg-3">123   </div>
+                    <div className="col-lg-3">101112</div>
                 </div>
             </div>
         )
